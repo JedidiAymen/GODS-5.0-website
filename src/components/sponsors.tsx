@@ -5,7 +5,7 @@ import { Marquee } from "./ui/marquee";
 import { cn } from "@/lib/utils";
 import alBuhairaLogo from "@/assets/sponsors/Al-Buhaira-Invest.png";
 import ieeeCisLogo from "@/assets/sponsors/ieee cis tunisia chapter logo (1).png";
-import pwcLogo from "@/assets/sponsors/PwC transparent.png";
+import pwcLogo from "@/assets/sponsors/PwC_logo_rgb_colour_rev.png";
 import pristineLogo from "@/assets/sponsors/Pristine.png";
 import uikLogo from "@/assets/sponsors/Uik Transparent.jpeg";
 

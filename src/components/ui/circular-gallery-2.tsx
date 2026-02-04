@@ -110,6 +110,10 @@ function createTextTexture(
   canvas.height = textHeight + 40;
   context.font = scaledFont;
   context.fillStyle = color;
+  context.shadowColor = "rgba(255, 255, 255, 0.9)";
+  context.shadowBlur = Math.max(8, Math.floor(scaledFontSize * 0.25));
+  context.shadowOffsetX = 0;
+  context.shadowOffsetY = 0;
   context.textBaseline = "middle";
   context.textAlign = "center";
   context.clearRect(0, 0, canvas.width, canvas.height);

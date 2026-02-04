@@ -149,6 +149,7 @@ function Team() {
               scrollEase={0.06}
               autoScroll={true}
               autoScrollSpeed={0.08}
+              className="text-white"
             />
           </div>
           <div className="absolute inset-0 pointer-events-none ring-1 ring-primary/20 rounded-3xl" />
