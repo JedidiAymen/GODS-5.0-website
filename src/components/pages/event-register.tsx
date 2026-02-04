@@ -68,6 +68,8 @@ const formSchema = z
     }
   });
 
+const safeValue = (value?: string) => value ?? "";
+
 type RegisterFormValues = z.infer<typeof formSchema>;
 
 function EventRegister() {
@@ -120,7 +122,6 @@ function EventRegister() {
 
   const uploadCv = async (file: File, folder: string) => {
     const formData = new FormData();
-    const safeValue = (value?: string) => value ?? "";
     formData.append("file", file);
     formData.append("upload_preset", CLOUDINARY_UPLOAD_PRESET);
     formData.append("folder", `gods5/cv/${folder}`);
