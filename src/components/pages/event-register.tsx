@@ -176,14 +176,14 @@ function EventRegister() {
     }
 
     const formData = new FormData();
-    formData.append("entry.1809864013", values.teamName);
-    formData.append("entry.1585304413", values.leaderName);
-    formData.append("entry.455125614", values.leaderEmail);
-    formData.append("entry.498503970", values.leaderPhone);
-    formData.append("entry.68415102", values.leaderAttendance);
-    formData.append("entry.497263609", values.leaderUniversity);
-    formData.append("entry.682763593", values.leaderCountry);
-    formData.append("entry.1707833588", values.teamSize);
+    formData.append("entry.1809864013", safeValue(values.teamName));
+    formData.append("entry.1585304413", safeValue(values.leaderName));
+    formData.append("entry.455125614", safeValue(values.leaderEmail));
+    formData.append("entry.498503970", safeValue(values.leaderPhone));
+    formData.append("entry.68415102", safeValue(values.leaderAttendance));
+    formData.append("entry.497263609", safeValue(values.leaderUniversity));
+    formData.append("entry.682763593", safeValue(values.leaderCountry));
+    formData.append("entry.1707833588", safeValue(values.teamSize));
     formData.append("entry.1720792431", safeValue(values.member1Name));
     formData.append("entry.1112413563", safeValue(values.member1Email));
     formData.append("entry.885338123", safeValue(values.member1Attendance));
@@ -195,7 +195,7 @@ function EventRegister() {
     formData.append("entry.1502424636", "");
     formData.append("entry.1102450313", "");
     const additionalInfo = [values.additionalInfo?.trim(), cvLinks.join(" | ")]
-      .filter(Boolean)
+      .filter((value): value is string => Boolean(value))
       .join(" | ");
     formData.append("entry.195544129", additionalInfo);
 

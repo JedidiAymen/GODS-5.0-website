@@ -6,7 +6,6 @@ import {
   Clock,
   Coffee,
   Code,
-  Utensils,
   Presentation,
   Trophy,
   PartyPopper,
